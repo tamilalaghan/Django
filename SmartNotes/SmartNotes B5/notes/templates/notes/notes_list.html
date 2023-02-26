@@ -1,0 +1,12 @@
+<html>
+    <title>Smart Notes</title>
+    <body>
+        <h2> This is Smart Notes Page</h2>
+        <h3> Notes </h3>
+        <ul>
+            {% for notes in notes %}
+            <li>{{notes.title}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
