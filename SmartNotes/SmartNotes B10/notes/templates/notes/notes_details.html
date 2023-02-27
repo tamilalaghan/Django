@@ -1,0 +1,14 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel = "stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <title>Notes Details</title>
+    </head>
+   
+    <body>
+        <h1> This is Notes Detail Page</h1>
+        <h2 >{{note.title}}</h2>
+        <p class="notes-list">{{note.text}}</p>
+    </body>
+</html>
