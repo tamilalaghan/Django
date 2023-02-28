@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <h1>This is Home Page</h1>
+        <h4>Your Lucky Number is {{randomnumber}}</h4>
+        <a href="{% url 'notes.list' %}", class="btn btn-primary"> Smart Notes </a>
+
+{% endblock %}
