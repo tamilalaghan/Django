@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    
+    <div class="row g-2 row-cols3 ">
+        {% for notes in notes_list %}
+        <div class="col">
+            <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+                <a href ="{% url 'notes.detail' pk=notes.id %}"><h4 class="notes-list">{{notes.title}}</h4></a>
+                {{notes.text|truncatechars:15}}
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    
+   
+
+
+
+{% endblock %}
+
+
+
+
+
+<!-- {% load static %}
+<html>
+    <head>
+        <link rel ="stylesheet" type="text/css" href="{% static 'css/style.css'%}"/>
+    </head>
+    
+    <body>
+        <h1> This is Notes List Page</h1>
+        <ul>
+            {% for notes in notes_list %}
+              <li class="note-li">{{notes.title}}</li>
+              <li>{{notes.title}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html> -->

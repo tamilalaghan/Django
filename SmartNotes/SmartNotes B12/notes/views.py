@@ -13,15 +13,6 @@ from notes.models import Notes
 
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView
-
-
-class NotesNew(CreateView):
-    model = Notes
-    fields = ['title','text']
-    success_url = "/smart/notes"
-    template_name ="notes/notes_new.html"
-
 
 class NotesView(ListView):
     model = Notes
